@@ -12,4 +12,9 @@ inputs.forEach((el) => {
   el.parentElement.append(label);
 });
 
-inputs.forEach((el) => el.setAttribute('placeholder', el.name));
+inputs.forEach((el) => {
+  return el.setAttribute(
+    'placeholder',
+    el.name.charAt(0).toUpperCase() + el.name.slice(1),
+  );
+});
